@@ -1,6 +1,6 @@
 //
 //  main.cpp
-//  Laba2
+//  BinaryOperations
 //
 //  Created by Hentai Princess on 22.11.2017.
 //  Copyright © 2017 Hentai Princess. All rights reserved.
@@ -37,18 +37,15 @@ int main() {
     cout << "Введите два двоичных числа:" << endl;
     Binary a, b;
     a.Read();
-    if (!a.isCorrect()) {
-        cout << "Введенное значение неверно. Повторите ввод." << endl;
-        getchar();
-        getchar();
-        return 0;
+    
+    while (!a.isCorrect()) {
+        cout << "Введенное значение первого числа неверно. Повторите ввод." << endl;
+        a.Read();
     }
     b.Read();
     if (!b.isCorrect()) {
-        cout << "Введенное значение неверно. Повторите ввод."<<endl;
-        getchar();
-        getchar();
-        return 0;
+        cout << "Введенное значение второго числа неверно. Повторите ввод."<<endl;
+        b.Read();
     }
     Binary res;
     int n = Menu();
@@ -59,9 +56,7 @@ int main() {
         case 3: res = a / b;  break;
         case 4: res = a * b;  break;
         case 5: res = Mod(a, b);  break;
-        default: cout << "Введенное значение неверно. Повторите ввод." << endl;
-            getchar();
-            getchar();
+        default: cout << "Введенное значение неверно." << endl;
             return 0;
     }
     res.Display();
@@ -70,3 +65,4 @@ int main() {
     
     return 0;
 }
+

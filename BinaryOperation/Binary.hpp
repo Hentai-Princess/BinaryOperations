@@ -1,6 +1,6 @@
 //
 //  Binary.hpp
-//  Laba2
+//  BinaryOperations
 //
 //  Created by Hentai Princess on 22.11.2017.
 //  Copyright © 2017 Hentai Princess. All rights reserved.

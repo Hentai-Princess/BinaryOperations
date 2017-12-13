@@ -1,6 +1,6 @@
 //
 //  Binary.cpp
-//  Laba2
+//  BinaryOperations
 //
 //  Created by Hentai Princess on 22.11.2017.
 //  Copyright © 2017 Hentai Princess. All rights reserved.
@@ -101,7 +101,7 @@ void Binary::Display(string str) {
     cout << ToString() << str;
 }
 
-//определяет равно ли !!!!!!!!!!!!
+//определяет равно ли
 bool Binary::operator == (Binary b) {
     if (Size != b.Size) return false;
     int i = 0;
@@ -171,7 +171,7 @@ Binary Binary::operator + (Binary b) {
         x = t / 2;
     }
     for (; i <= maxx.Size && i<99; i++, j++) {
-        int t = maxx.number[i] + x;
+        int t = maxx.number[i] + '0'  + x;
         res.number[j] = num[t % 2];
         x = t / 2;
     }
@@ -199,7 +199,7 @@ Binary Binary::operator - (Binary b) {
         
     }
     for (; i < Size; i++) {
-        int t = number[i] + x;
+        int t = number[i] - '0' + x;
         if (t >= 0) {
             res.number[i] = num[t];
             x = 0;
@@ -293,3 +293,4 @@ Binary Mod(Binary a, Binary b) {
     else
         return Zero;
 }
+
